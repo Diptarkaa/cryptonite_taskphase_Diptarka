@@ -1,13 +1,13 @@
-#1. The Root
+# 1. The Root
 
 /pwn
 takes us to the pwn directory. / means that it is in the root directory
 
-#2. Program and asolute paths
+# 2. Program and asolute paths
 
 /challenge/run
 
-#3. Position by thy self
+# 3. Position by thy self
 
 cd /challenge
 ls
@@ -20,7 +20,7 @@ You are not currently in the /var directory.`
 cd /var
 /challenge/run
 
-#4. Position elsewhere
+# 4. Position elsewhere
 
 cd /challenge
 ./run
@@ -32,7 +32,7 @@ You are not currently in the /proc/215 directory.`
 cd /proc/215
 /challenge/run
 
-#5. Position yet elsewhere
+# 5. Position yet elsewhere
 
 cd /challenge
 ./run
@@ -44,19 +44,23 @@ You are not currently in the /usr/share/build-essential directory.`
 cd /usr/share/build-essential
 /challenge/run
 
-#6. implicit relative paths, from /
+# 6. implicit relative paths, from /
 
 cd /
 challenge/run
 
-#7. explicit relative paths, from /
+# 7. explicit relative paths, from /
 
 cd /
 ./challenge/run
 
-#8. implicit relative path
+# 8. implicit relative path
 
 cd /challenge
 ./run
 
-#9. home sweet home
+# 9. home sweet home
+
+/challenge/run ~/f
+
+`the argument has to be in the home directory and cannot be more than 3 characters long`
