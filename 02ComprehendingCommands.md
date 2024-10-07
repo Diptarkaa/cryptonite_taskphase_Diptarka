@@ -48,3 +48,23 @@ ls -a
 `gave a hidden file named .flag-8867748719146`
 
 cat .flag-8867748719146
+
+# 9. An epic Filesystem quest
+
+cd /
+ls -a
+cat INFO
+
+`Shows the following:
+Tubular find!
+The next clue is in: /usr/local/lib/python3.8/dist-packages/sympy/interactive/__pycache__
+Watch out! The next clue is **trapped**. You'll need to read it out without 'cd'ing into the directory; otherwise, the clue will self destruct!`
+
+ls  /usr/local/lib/python3.8/dist-packages/sympy/interactive/__pycache__
+cat  /usr/local/lib/python3.8/dist-packages/sympy/interactive/__pycache__/ALERT-TRAPPED
+
+`It shows:
+Lucky listing!
+The next clue is in: /opt/busybox/busybox-1.33.2/include/config/feature/ps/additional
+The next clue is **delayed** --- it will not become readable until you enter the directory with 'cd'.`
+
