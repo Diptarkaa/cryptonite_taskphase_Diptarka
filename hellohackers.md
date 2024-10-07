@@ -1,10 +1,8 @@
-# Hello Hackers
-
-## 1. Introduction to commands
+# 1. Introduction to commands
 
 hello
 
-## 2. Introduction to arguments
+# 2. Introduction to arguments
 
 hello hacker
 
