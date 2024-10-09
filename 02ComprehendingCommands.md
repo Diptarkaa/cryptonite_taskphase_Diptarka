@@ -68,3 +68,50 @@ Lucky listing!
 The next clue is in: /opt/busybox/busybox-1.33.2/include/config/feature/ps/additional
 The next clue is **delayed** --- it will not become readable until you enter the directory with 'cd'.`
 
+cat /usr/local/lib/python3.8/dist-packages/sympy/interactive/__pycache__/ALERT-TRAPPED
+cd /opt/busybox/busybox-1.33.2/include/config/feature/ps/additional
+ls -a
+cat TIP
+cd /usr/share/javascript/mathjax/unpacked/jax/output/HTML-CSS/fonts/STIX/SizeFourSym 
+ls -a
+cat .TRACE
+cd /usr/share/help/oc/gedit
+ls -a
+cat INSIGHT
+cd /opt/kropr/.git/objects/3a
+ls
+cat BRIEF
+cd /usr/lib/ruby/2.7.0/csv
+ls -a
+cat REVELATION
+cd /opt/pwndbg/.venv/lib/python3.8/site-packages/pwnlib/constants
+ls -a
+cat SECRET
+cd /opt/ghidra/Ghidra/Processors/HCS08/data/languages
+cat NOTE-TRAPPED
+
+# 10. Making Directories
+
+mkdir /tmp/pwn
+touch /tmp/pwn/college
+/challenge/run
+
+`mkdir command is used to create a new directory`
+
+# 11. Finding files
+
+find / -name flag
+cat /usr/lib/python3/dist-packages/openid/server/__pycache__/flag
+
+`here we specified / so that it searches for all occurences in the whole file system. If we hadn't specified it, find would have just searched in the current working directory.`
+
+# 12. Linking files
+
+`you want two programs to access the same data, but the programs expect that data to be in two different locations. Luckily, Linux provides a solution to this quandry: links.`
+
+`In a filesystem, a file is, conceptually, an address at which the contents of that file live. A hard link is an alternate address that indexes that data --- accesses to the hard link and accesses to the original file are completely identical, in that they immediate yield the necessary data. A soft/symbolic link, instead, contains the original file name. When you access the symbolic link, Linux will realize that it is a symbolic link, read the original file name, and then (typically) automatically access that file. In most cases, both situations result in accessing the original data, but the mechanisms are different.`
+
+ln -s /flag ~/not-the-flag
+/challenge/catflag
+
+`ln -s actual_file file_referencing_actual_file`
