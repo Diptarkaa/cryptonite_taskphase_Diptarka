@@ -22,3 +22,18 @@ man challenge
 
 # 5. Searching for manuals
 
+man man
+man -k flag
+man mqczfp
+/challenge/challenge --mqczfp 141
+
+# 6. 6. Helpful Programs
+
+/challenge/challenge --help
+/challenge/challenge -p
+/challenge/challenge -g 348
+
+# 7. Help for builtins
+
+help challenge
+challenge --secret 0vBB3w8p
