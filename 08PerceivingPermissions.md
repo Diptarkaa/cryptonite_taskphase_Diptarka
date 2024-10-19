@@ -28,3 +28,69 @@ cat /flag
 
 # 2. Groups and Files
 
+`group ownership can be changed with the chgrp (change group) command!`
+
+chgrp hacker /flag
+cat /flag
+
+# 3. Fun with Group names
+
+`You can check what groups you are part of with the id command:`
+
+id
+chgrp grp15084 /flag
+cat /flag
+
+# 4. Changing Permissions
+
+` r - user/group/other can read the file (or list the directory)
+w - user/group/other can modify the files (or create/delete files in the directory)
+x - user/group/other can execute the file as a program (or can enter the directory, e.g., using cd)`
+`- - nothing `
+
+`Like ownership, file permissions can also be changed. This is done with the chmod (change mode) command.`
+
+`You can specify the MODE in two ways: as a modification of the existing permissions mode, or as a completely new mode to overwrite the old one.
+In this level, we will cover the former: modifying an existing mode. chmod allows you to tweak permissions with the mode format of WHO+/-WHAT, where WHO is user/group/other and WHAT is read/write/execute. For example, to add read access for the owning user, you would specify a mode of u+r. write and execute access for the group and the other (or all the modes) are specified the same way. More examples:
+u+r, as above, adds read access to the user's permissions
+g+wx adds write and execute access to the group's permissions
+o-w removes write access for other users
+a-rwx removes all permissions for the user, group, and world`
+
+chmod ugo+rwx /flag
+cat /flag
+
+# 5. Executable files.
+
+chmod ugo+x /challenge/run
+/challenge/run
+
+# 6. Permission Tweaking Practice
+
+chmod ugo+rw /challenge/pwn
+
+`similarly we had to change the permissions 8 times as asked by the terminal`
+
+chmod ugo+rw /flag
+cat /flag
+
+# 7. Permissions Setting Practice
+
+`chmod can also simply set permissions altogether, overwriting the old ones. This is done by using = instead of - or +.`
+
+chmod u=wx,go=x /challenge/pwn
+`similarly we had to change the permissions 8 times as asked by the terminal`
+
+chmod a=rwx /flag
+cat /flag
+
+# 8. The SUID Bit
+
+`There are many cases in which non-root users need elevated access to do certain system tasks. The system admin can't be there to give them the password every time a user wanted to do a task that only root/sudoers can do. The "Set User ID" (SUID) permissions bit allows the user to run a program as the owner of that program's file.`
+
+`The s part in place of the executable bit means that the program is executable with SUID. It means that, regardless of what user runs the program (as long as they have executable permissions), the program will execute as the owner user (in this case, the root user).`
+
+chmod u+s /challenge/getroot
+/challenge/getroot
+cat /flag
+
