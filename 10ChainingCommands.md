@@ -6,3 +6,16 @@
 
 # 2. Your first shell script
 
+`vim is used to write a shell script
+:q - Quit the editor
+:q! - Quit without saving changes i.e. discard changes.
+:wq - Save the changes and quit the editor`
+
+vim x.sh
+i
+/challenge/pwn;/challenge/college
+`escape button to escape`
+:wq
+bash x.sh
+
+# 3. Redirecting script output
