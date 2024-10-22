@@ -10,3 +10,17 @@ PATH=/challenge/more_commands/
 
 # 3. Adding commands
 
+vim win
+cat win
+cat /flag
+chmod +x win
+PATH="$PATH:/home/hacker"
+/challenge/run
+
+# 4. Hijacking Commands
+
+PATH=/home/hacker:$PATH
+nano rm
+cat rm
+cat /flag
+/challenge/run
