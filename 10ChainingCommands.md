@@ -19,3 +19,16 @@ i
 bash x.sh
 
 # 3. Redirecting script output
+
+`we had already created the shell script in the previous level`
+
+bash x.sh | /challenge/solve
+
+# 4. Executable shell scripts
+
+vim new.sh
+i
+/challenge/solve
+:wq
+./new.sh
+
