@@ -11,8 +11,11 @@ PATH=/challenge/more_commands/
 # 3. Adding commands
 
 vim win
-cat win
+i
 cat /flag
+:wq
+
+cat win
 chmod +x win
 PATH="$PATH:/home/hacker"
 /challenge/run
