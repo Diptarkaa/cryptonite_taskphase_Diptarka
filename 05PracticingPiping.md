@@ -81,3 +81,8 @@ bash used the echo builtin to print HACK into tee's standard input
 tee read HACK, wrote it to standard output, and then wrote it to /dev/fd/63 (which is connected to rev's stdin)
 rev read HACK from its standard input, reversed it, and wrote KCAH to standard output`
 
+ /challenge/hack | tee >(/challenge/the) | /challenge/planet
+
+ # 11. Split-piping stderr and stdout
+
+/challenge/hack 2> >(/challenge/the) | /challenge/planet
