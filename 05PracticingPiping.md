@@ -10,6 +10,9 @@ echo  PWN > COLLEGE
 
 # 2. Redirecting more output
 
+ /challenge/run > myflag
+ cat myflag
+ 
 # 3. Appending Output
 
 `You can redirect input in append mode using >> instead of >`
